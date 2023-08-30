@@ -1,0 +1,278 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+    <style>
+      *{
+  box-sizing:border-box;
+  padding:0;
+  margin:0;
+  /* border:1px solid black; */
+  font-family:Verdana;
+  /* overflow-x:hidden; */
+  scroll-behavior:smooth;
+}
+body{
+  min-width:510px;
+}
+#navbar{
+  position:fixed;
+  top:0;
+  height:80px;
+  width:100%;
+  display:flex;
+  justify-content:flex-end;
+  align-items:center;
+  background-color:rgb(250,80,80);
+  color:white;
+}
+#navbar div{
+  margin:20px;
+  font-size:18px;
+  text-shadow: 0 0 4px #000;
+
+}
+#navbar a{
+  text-decoration:none;
+  color:white;
+}
+#welcome-section{
+  height:100vh;
+  padding-top:80px;
+  display:flex;
+  justify-content:center;
+  align-items:center;  
+  flex-direction:column;
+  background-color:rgb(60,60,60);
+}
+#welcome-section h1{
+  color:white;
+  font-size:40px;
+}
+#welcome-section p{
+  color:rgb(255,100,100);
+  margin-top:30px;
+  font-size:20px;
+  font-style:italic;
+  font-weight:100;
+}
+#projects{
+  height:auto;
+  padding:80px 20px;
+  text-align:center;
+  background-color:rgb(100,100,160);
+}
+.project a{
+  text-decoration:none;
+  color:white;
+}
+.project h3{
+  text-decoration:none;
+  color:white;
+}
+#projects p {
+  font-size:30px;
+  color:white;
+  border-bottom:2px solid white;
+  margin:0 auto 50px auto;
+  width:485px;
+}
+#grid{
+  display:grid;
+  grid-template-columns:auto auto auto;
+  grid-template-rows:auto auto;
+  column-gap:30px;
+  row-gap:30px;
+  place-items:center;
+}
+.project{
+  width:300px;
+  height:auto;
+  box-shadow:0px 0px 10px black;
+  border-radius:2px;
+
+}
+.project img{
+  width:300px;
+  height:300px;
+  object-fit:cover;
+
+}
+.project-title{
+  background-color:rgb(60,60,60);
+  color:white;
+  font-weight:normal;
+  padding:20px 0;
+  border-radius:0 0 2px 2px;
+}
+#contact{
+  padding-top:80px;
+  display:flex;
+  justify-content:center;
+  align-items:center;  
+  flex-direction:column;
+  background-color:rgb(60,60,60);
+}
+#contact h1{
+  color:white;
+  font-size:40px;
+}
+#contact p{
+  color:white;
+  margin-top:30px;
+  font-size:20px;
+  font-style:italic;
+  font-weight:100;
+}
+ 
+#links{
+  margin-top:20px;
+  display:flex;
+  justify-content:space-between;
+  height:80px;
+}
+#links a{
+  margin:0 10px;
+  padding-top:10px;
+  text-decoration:none;
+  color:white;
+  text-shadow: 0 0 4px #000;
+  position:relative;
+}
+#links a:hover{
+  padding-top:15px;
+  transition-timing-function:linear;
+  transition-duration:0.3s;
+}
+ 
+footer{
+  width:100%;
+border-top:2px solid rgb(255,100,100);
+margin-bottom:10px;
+}
+footer div{
+  color:white;
+  text-align:center;
+  padding:20px;
+  
+}
+
+
+ 
+ 
+ 
+ @media screen and (max-width:1000px){
+   #grid{
+     grid-template-columns:auto auto;
+     grid-template-rows:auto auto auto;
+
+   }
+   .project{
+     width:400px;
+   }
+ }
+
+ @media screen and  (max-width:870px){
+   #grid{
+     grid-template-columns:auto ;
+     grid-template-rows:auto auto auto auto auto auto;
+
+   }
+   .project{
+     width:400px;
+     margin-left:auto;
+     margin-right:auto;
+   }
+ }
+
+ @media screen and (max-width:530px){
+    #navbar{
+     flex-direction:column;
+     height:130px;
+     justify-content:center;
+
+   }
+   #navbar div{
+     padding:5px;
+     margin:0;
+   }
+ }
+
+
+    </style>
+    </head>
+
+    <body>
+     
+     <nav id="navbar">
+      <a href="#welcome-section" ><div>About</div></a>
+      <a href="#projects" ><div>Work</div></a>
+      <a href="#contact" ><div>Contact</div></a>
+     </nav>
+
+     <section id="welcome-section">
+       <h1>Hey I am Mimic</h1>
+       <p>a web developer</p>
+     </section>
+
+     <section id="projects">
+       <p >These are some of my projects</p>
+       <div id="grid">
+            
+            <div class="project">
+              <img src="https://cdn.freecodecamp.org/testable-projects-fcc/images/tribute.jpg" alt="image" />
+              <h3 class="project-tile"><a href="#contact">Tribute Page</a></h3>
+              </div>
+
+                <div class="project">
+              <img src="https://cdn.freecodecamp.org/testable-projects-fcc/images/random-quote-machine.png" alt="image" />
+              <h3 class="project-tile">Random Quote Machine</h3>
+              </div>
+
+                <div class="project">
+              <img src="https://cdn.freecodecamp.org/testable-projects-fcc/images/calc.png" alt="image" />
+              <h3 class="project-tile">JavaScript Calculator</h3>
+              </div>
+
+                <div class="project">
+              <img src="https://cdn.freecodecamp.org/testable-projects-fcc/images/map.jpg" alt="image" />
+              <h3 class="project-tile">Map Data Across the Globe</h3>
+              </div>
+
+                <div class="project">
+              <img src="https://cdn.freecodecamp.org/testable-projects-fcc/images/wiki.png" alt="image" />
+              <h3 class="project-tile">Wikipedia Viewer</h3>
+              </div>
+
+                <div class="project">
+              <img src="https://cdn.freecodecamp.org/testable-projects-fcc/images/tic-tac-toe.png" alt="image" />
+              <h3 class="project-tile">Tic Tac Toe Game</h3>
+              </div>
+       </div>
+
+     </section>
+
+<section id="contact">
+
+<h1>Let's work together...</h1>
+       <p>How do you take your coffee?</p>
+ 
+ <div id="links">
+   <a href="#" class="profile-link">Facebook</a>
+   <a href="#" class="profile-link">GitHub</a>
+   <a href="https://www.freecodecamp.org/himanxunegi" id="profile-link" target="_blank">freeCodeCamp</a>
+   <a href="#" class="profile-link">Send a mail</a>
+   <a href="#" class="profile-link">Call me</a>
+   
+ </div>
+
+<footer>
+<div>**This is just a fake portfolio. All the projects and contact details given are not real.</div>
+
+</footer>
+
+</section>
+ </body>
+      </html>
